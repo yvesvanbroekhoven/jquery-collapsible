@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--<meta http-equiv="Content-Language" content="nl-BE"> Only use if site is in non US english -->
+  <!--<meta name="Language" content="english"> Only use if site is in non US english -->
+  <meta charset="utf-8" />
+  <meta name="description" content="">
+
+  <title>jQuery Collapsible</title>
+  
+  <style type="text/css" media="screen">
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    
+    li {
+      position: relative;
+      padding: 5px 0 5px 15px;
+    }
+    
+    .collapsible-trigger {
+      display: block; 
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 0px; 
+      height: 0px; 
+      border-style: solid;
+      text-indent: -8888px;
+      cursor: pointer;
+    }
+    
+    .collapsible-trigger.closed {
+      border-width: 5px 0 5px 8px;
+      border-color: transparent transparent transparent #000;
+    }
+    
+    .collapsible-trigger.open {
+      border-width: 8px 5px 0 5px;
+      border-color: #000 transparent transparent transparent;
+    }
+    
+  </style>
+  
+  <script src="http://www.google.com/jsapi?key="></script>
+  <script type="text/javascript">
+    google.load("jquery", "1.5");
+  </script>
+  <script src="jquery-collapsible.js"></script>
+  <script>
+    $(function(){
+      $('.tree').collapsible();
+      $('.save-state').click(function(event){
+        event.preventDefault();
+        $.fn.collapsible.saveState($('.tree'));
+      });
+    });
+  </script>
+
+</head>
+<body>
+<a href="#" class="save-state">Save state in cookie</a>
+<ul class="tree">
+  <li id="1">
+    <span class="collapsible-trigger">-</span>
+    One
+    <ul class="collapsible-target">
+      <li>
+        <span class="collapsible-trigger">-</span>
+        One
+        <ul class="collapsible-target">
+          <li>One</li>
+          <li>Two</li>
+          <li>Three</li>
+        </ul>
+      </li>
+      <li>Two</li>
+      <li>Three</li>
+    </ul>
+  </li>
+  <li id="2">
+    <span class="collapsible-trigger">-</span>
+    Two
+    <ul class="collapsible-target">
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+    </ul>
+  </li>
+  <li id="3">
+    Three
+    <ul>
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+    </ul>
+  </li>
+</ul>
+</body>
+</html>
