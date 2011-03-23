@@ -33,3 +33,9 @@ Put this inside your jQuery DOM ready function:
 The only difference between the full & lite version is that the full version
 includes a save of the current collapsed state in a cookie when your user 
 leaves the page.
+
+## Public functions
+
+In the full version you have the ability to save the current state by running:
+
+    $.fn.collapsible.saveState($('.tree'));

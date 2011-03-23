@@ -40,7 +40,6 @@
     
     $(window).unload(function(){
       _saveState($ctx);
-      alert('state saved');
     });
   };
   
