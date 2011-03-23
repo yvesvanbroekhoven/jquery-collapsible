@@ -16,7 +16,12 @@ jQuery collapsible provides collapsibility to your tree list.
         </ul>
       </li>
     </ul>
-    
+
+You can force a tree leaf to be open at initial use by adding the css class 
+"open" to trigger:
+
+    <span class="collapsible-trigger open">trigger</span>
+
 ### Javascript
 
 Put this inside your jQuery DOM ready function:

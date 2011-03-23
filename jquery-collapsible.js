@@ -2,6 +2,7 @@
  * Collapse the slibling
  * Author: Yves Van Broekhoven
  * Created at: 2011-03-10
+ * Version: 1.0.0
  */
  
 (function($){
