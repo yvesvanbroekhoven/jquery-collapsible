@@ -9,10 +9,16 @@
   <title>jQuery Collapsible</title>
   
   <style type="text/css" media="screen">
+    html, body { margin: 0; padding: 0; height: 100%; }
+    body { font-size: 20px; }
     ul {
       margin: 0;
-      padding: 0;
+      padding: 20px;
       list-style: none;
+    }
+    
+    ul ul {
+      padding: 0;
     }
     
     li {
@@ -23,7 +29,7 @@
     .collapsible-trigger {
       display: block; 
       position: absolute;
-      top: 8px;
+      top: 11px;
       left: 0;
       width: 0px; 
       height: 0px; 
@@ -33,12 +39,12 @@
     }
     
     .collapsible-trigger.closed {
-      border-width: 5px 0 5px 8px;
+      border-width: 5px 0 5px 10px;
       border-color: transparent transparent transparent #000;
     }
     
     .collapsible-trigger.open {
-      border-width: 8px 5px 0 5px;
+      border-width: 10px 5px 0 5px;
       border-color: #000 transparent transparent transparent;
     }
     
@@ -98,5 +104,18 @@
     </ul>
   </li>
 </ul>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22218156-2']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </body>
 </html>
